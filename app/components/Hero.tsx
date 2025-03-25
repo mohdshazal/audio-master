@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-20 flex items-center overflow-hidden bg-gradient-to-b from-black via-black/95 to-black/90"
+      className="relative min-h-screen pt-12 inset-x-auto sm:pt-20 flex items-center overflow-hidden bg-gradient-to-b from-black via-black/95 to-black/90"
     >
       <div className="container relative z-10 mx-auto px-4 md:px-6 pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
