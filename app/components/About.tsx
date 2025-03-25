@@ -1,6 +1,4 @@
-
 import React from "react";
-import { cn } from "@/lib/utils";
 import AnimatedSection from "./AnimatedSection";
 import { Award, Clock, Users, ShieldCheck } from "lucide-react";
 
@@ -81,7 +79,7 @@ const About = () => {
                 Our team of certified audio engineers and installation experts brings decades of combined experience to every project. We pride ourselves on our attention to detail, technical expertise, and commitment to customer satisfaction.
               </p>
               <p>
-                Whether you're looking for a simple speaker setup or a comprehensive multi-room audio solution, we approach each project with the same level of dedication and precision.
+                Whether you&rsquo;re looking for a simple speaker setup or a comprehensive multi-room audio solution, we approach each project with the same level of dedication and precision.
               </p>
             </div>
 

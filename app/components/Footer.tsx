@@ -1,8 +1,7 @@
 
 import React from "react";
-import { cn } from "@/lib/utils";
 import Logo from "./Logo";
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 interface SocialLink {
   icon: React.ElementType;

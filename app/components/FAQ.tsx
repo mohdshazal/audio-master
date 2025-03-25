@@ -1,6 +1,5 @@
 
 import React from "react";
-import { cn } from "@/lib/utils";
 import AnimatedSection from "./AnimatedSection";
 import {
   Accordion,
@@ -52,13 +51,13 @@ const FAQ = () => {
           </p>
         </AnimatedSection>
 
-        <AnimatedSection 
+        <AnimatedSection
           className="max-w-3xl mx-auto bg-gradient-to-br from-black/70 to-black/40 rounded-xl p-6 md:p-8 backdrop-blur-sm border border-white/5 shadow-xl"
         >
           <Accordion type="single" collapsible className="space-y-2">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
+              <AccordionItem
+                key={index}
                 value={`faq-${index}`}
                 className="border-white/10 last:border-b-0 rounded-lg overflow-hidden transition-all duration-300 hover:bg-white/5"
               >

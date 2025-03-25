@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import { cn } from "@/lib/utils";
 import AnimatedSection from "./AnimatedSection";
 import { MapPin, Phone, Mail, Send, MessageSquare, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -103,7 +102,7 @@ const Contact = () => {
                   </div>
                   <h4 className="text-lg font-medium mb-2">Message Sent!</h4>
                   <p className="text-muted-foreground text-center">
-                    Thank you for contacting us. We'll get back to you shortly.
+                    Thank you for contacting us. We&rsquo;ll get back to you shortly.
                   </p>
                 </div>
               ) : (

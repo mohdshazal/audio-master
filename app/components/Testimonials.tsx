@@ -114,7 +114,7 @@ const Testimonials = () => {
                   ))}
                 </div>
                 <blockquote className="text-xl md:text-2xl italic mb-6 max-w-2xl">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div className="flex flex-col items-center">
                   <div className="font-medium text-lg">{testimonial.name}</div>
