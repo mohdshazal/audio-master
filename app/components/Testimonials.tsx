@@ -48,6 +48,14 @@ const testimonials: Testimonial[] = [
     quote: "The technicians from Audio Master was extremely knowledgeable and efficient. They explained every step, kept the space clean, and completed the job faster than expected — all at a very fair price.",
     rating: 5,
   },
+  {
+    id: 6,
+    name: "Stephin Varghese",
+    position: "Villa Owner, JBR",
+    quote:
+      "From the first call to the final setup, the professionalism of Audio Master stood out. The system they installed gives my villa a luxury feel, and the pricing was surprisingly reasonable for the quality delivered.",
+    rating: 5,
+  }
 ];
 
 const Testimonials = () => {

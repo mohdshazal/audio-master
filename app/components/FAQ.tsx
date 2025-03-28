@@ -11,11 +11,15 @@ import {
 const faqs = [
   {
     question: "What types of audio systems do you install?",
-    answer: "We specialize in premium audio installations including home theater systems, multi-room audio setups, outdoor speaker systems, and high-end stereo configurations. We work with top-tier brands to deliver exceptional sound quality."
+    answer: "We specialize in premium audio installations including home theater systems, multi-room audio setups, outdoor speaker systems, and high-end stereo configurations. Our expert technicians deliver exceptional sound quality with top-tier brands, ensuring a perfect fit for your home or business."
   },
   {
     question: "How long does a typical installation take?",
-    answer: "Installation timeframes vary depending on the complexity of the project. A basic single-room setup might take 1-2 days, while a comprehensive whole-home audio system could take 1-2 weeks. We provide detailed timelines during the consultation process."
+    answer: "The installation timeline varies based on the complexity of the project. A simple single-room setup may take 1-2 days, while a complete whole-home audio system may require 1-2 weeks. Our team provides detailed timelines during the consultation process to ensure your system is installed on time and to your specifications."
+  },
+  {
+    question: "Do you offer audio system reinstallation or upgrades?",
+    answer: "Yes, we offer reinstallation, upgrades, and complete calibration services for existing audio systems. Whether you want to improve your current setup or completely overhaul it, our technicians are equipped to handle various audio systems and provide top-notch service, ensuring your system delivers optimal performance."
   },
   {
     question: "Do you offer maintenance services for existing systems?",
@@ -23,16 +27,24 @@ const faqs = [
   },
   {
     question: "Can you integrate audio systems with smart home technology?",
-    answer: "Absolutely. We specialize in integrating audio systems with various smart home platforms including Control4, Crestron, Savant, and others. We can also integrate with voice assistants like Alexa, Google Assistant, and Siri."
+    answer: "Absolutely! We specialize in integrating audio systems with smart home technologies such as Control4, Crestron, and Savant. Our services include seamless integration with voice assistants like Alexa, Google Assistant, and Siri, allowing you to control your audio system effortlessly through your smart devices."
   },
   {
     question: "Do you provide consultations before installation?",
-    answer: "Yes, we offer detailed consultations to understand your space, preferences, and budget. Our experts will assess your room acoustics and recommend the optimal audio solution tailored to your specific needs."
+    answer: "Yes, we provide in-depth consultations to understand your space, preferences, and budget. Our experts will assess your room acoustics and recommend the best audio solution, whether you're looking for premium sound quality or an affordable option that meets your needs. This ensures that your installation is tailored specifically to your requirements."
   },
   {
     question: "What warranties do you offer on installations?",
-    answer: "We provide a comprehensive warranty on all our installations, typically covering both labor and parts for 1-2 years. Additionally, the equipment comes with manufacturer warranties which we help you manage if any issues arise."
-  }
+    answer: "We offer a comprehensive warranty on all our audio system installations, typically covering both labor and parts for 1 year. Additionally, the equipment we install comes with manufacturer warranties, and we assist you with managing those warranties if issues arise after installation."
+  },
+  {
+    question: "How do you ensure top-notch quality in your installations?",
+    answer: "Our technicians are highly trained professionals with extensive experience in installing audio systems. We focus on delivering top-notch quality work, ensuring every installation is precise, efficient, and meets the highest standards of performance. We use only the best brands and technologies to guarantee that your audio system delivers exceptional sound quality."
+  },
+  {
+    question: "How do you ensure affordable pricing without compromising quality?",
+    answer: "At Audio Master, we believe in providing value for money. We offer competitive pricing while maintaining high-quality service. Our technicians work efficiently to minimize costs, and we offer tailored solutions that match your budget. Whether you need a premium or medium-level system, we ensure that you receive the best performance for your investment."
+  },
 ];
 
 const FAQ = () => {

@@ -1,6 +1,7 @@
 import React from "react";
 import AnimatedSection from "./AnimatedSection";
 import { Award, Clock, Users, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 interface Stat {
   icon: React.ElementType;
@@ -12,7 +13,7 @@ const stats: Stat[] = [
   {
     icon: Clock,
     value: "9+",
-    label: "Years Experience"
+    label: "Years of Experience"
   },
   {
     icon: Users,
@@ -27,22 +28,23 @@ const stats: Stat[] = [
   {
     icon: ShieldCheck,
     value: "100%",
-    label: "Satisfaction Rate"
+    label: "Customer Satisfaction"
   }
 ];
 
 const About = () => {
   return (
-    <section id="about" className="section-padding">
+    <section id="about" aria-labelledby="about-heading" className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="fade-in-up" className="relative">
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden h-[500px] w-ful">
               <div className="absolute inset-0 bg-gradient-to-tr from-burj-accent to-transparent opacity-20 z-10" />
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=3065&auto=format&fit=crop"
+                fill
                 alt="Audio Master Premium Equipment"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
@@ -93,7 +95,7 @@ const About = () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors duration-300">
                 <h3 className="font-medium mb-2 text-white">Our Vision</h3>
                 <p className="text-sm text-white/70">
-                  To be the premier provider of audio solutions, setting the standard for innovation and customer service.
+                  To become the leading name in premium audio solutions through constant innovation and unmatched service quality.
                 </p>
               </div>
             </div>
