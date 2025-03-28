@@ -15,25 +15,25 @@ const contactInfo: ContactInfo[] = [
   {
     icon: MapPin,
     title: "Our Location",
-    info: "123 Audio Street, Sound City",
+    info: "Bur dubai, Dubai, UAE",
   },
   {
     icon: Phone,
     title: "Phone Number",
-    info: "+91 9495205426",
-    link: "tel:+919495205426"
+    info: "+971 528367697",
+    link: "tel:+971528367697"
   },
   {
     icon: Mail,
     title: "Email Address",
-    info: "info@audiomaster.com",
-    link: "mailto:info@burjaudio.com"
+    info: "info@audiomaster.ae",
+    link: "mailto:info@audiomaster.ae"
   },
   {
     icon: MessageSquare,
     title: "WhatsApp",
-    info: "+91 9495205426",
-    link: "https://wa.me/919495205426"
+    info: "+971 528367697",
+    link: "https://wa.me/971528367697"
   }
 ];
 
@@ -53,30 +53,34 @@ const Contact = () => {
     setFormState(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formState);
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
       });
 
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+      if (res.ok) {
+        console.log('Message sent');
+        setIsSubmitted(true);
+        setFormState({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        console.error('Failed to send message');
+      }
+    } catch (err) {
+      console.error('Error sending message:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section id="contact" className="section-padding bg-secondary">
+    <section id="contact" role="region" aria-labelledby="contact-heading" className="section-padding bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 bg-burj-accent/10 rounded-full text-sm font-medium text-burj-accent mb-4">
@@ -106,7 +110,7 @@ const Contact = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} aria-label="Contact Form">
                   <div className="space-y-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-1">

@@ -87,7 +87,7 @@ export default function Home() {
       </main>
       <Footer />
       {/* <ScrollToTop /> */}
-      <WhatsAppButton phoneNumber="+919495205426" />
+      <WhatsAppButton phoneNumber="+971528367697" />
     </div>
   );
 }
