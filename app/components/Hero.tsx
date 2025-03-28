@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import Image from "next/image";
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
@@ -25,10 +25,10 @@ const Hero = () => {
 
   return (
     <section
-      id="home"
+      id="home" role="region" aria-label="Hero section"
       className="relative min-h-screen pt-12 inset-x-auto sm:pt-20 flex items-center overflow-hidden bg-gradient-to-b from-black via-black/95 to-black/90"
     >
-      <div className="container relative z-10 mx-auto px-4 md:px-6 pt-16 pb-12 md:pt-24 md:pb-16">
+      <div className="container relative z-10 mx-auto px-4 md:px-6 pt-16 pb-12 md:pt-20 md:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection
             animation="fade-in-up"
@@ -36,24 +36,23 @@ const Hero = () => {
             className="flex flex-col space-y-8"
           >
             <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/10 animate-pulse-custom">
-              Premium Audio Experience
+              Trusted Audio Installation Experts - UAE
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-              Elevate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/80 relative">
-                Sound
+              Premium Audio, <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/80 relative">
+                Perfectly Installed
                 <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-white/10 via-white/60 to-white/10 transform animate-reveal"></span>
-              </span> Experience
+              </span>
             </h1>
             <p className="text-lg text-white/70 max-w-2xl">
-              Audio Master delivers exceptional audio system installations and services
-              for homes and businesses, creating immersive soundscapes that transform your space.
+              We specialize in professional audio system installations, re-installations, and sound setup services across the UAE. Our expert team ensures your sound system is technically optimized to deliver the **ultimate listening experience** — all at a **budget-friendly price**, without compromising on quality.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href="#services"
                 className="button-primary flex items-center group shadow-lg shadow-white/5 hover:shadow-white/10"
               >
-                Our Services
+                Explore Services
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
@@ -78,15 +77,16 @@ const Hero = () => {
                   loaded && "opacity-20"
                 )}
               />
-
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1545454675-3531b543be5d?q=80&w=3540&auto=format&fit=crop"
-                alt="Premium Home Audio System"
+                alt="Premium home audio installation with high-quality speakers"
+                fill
+                quality={100}
+                priority
                 className={cn(
                   "relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl transition-all duration-1000 scale-95 opacity-0",
                   loaded && "scale-100 opacity-100"
                 )}
-                loading="lazy"
               />
 
               {/* Dynamic audio visualization rings */}

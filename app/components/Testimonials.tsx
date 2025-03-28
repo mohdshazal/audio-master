@@ -15,32 +15,39 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "Homeowner",
-    quote: "The team at Audio Master transformed our living room with an incredible sound system that's both powerful and aesthetically pleasing. Their attention to detail is exceptional!",
+    name: "Mohammed Khan",
+    position: "Luxury Apartment Owner, Downtown Dubai",
+    quote: "I didn't want visible cables or bulky speakers ruining my interior — they delivered a fully integrated system that sounds amazing and looks invisible. Truly premium service.",
     rating: 5
   },
   {
     id: 2,
-    name: "James Thompson",
-    position: "Restaurant Owner",
-    quote: "Our customers constantly comment on the perfect audio balance in our restaurant. Audio Master created a system that enhances the dining experience without overwhelming conversation.",
+    name: "Sarah Johnson",
+    position: "Villa Owner, Dubai Hills",
+    quote: "Audio Master designed an immersive home theatre experience that my family and guests absolutely love. The installation was seamless and the team was very respectful of our home and privacy.",
     rating: 5
   },
   {
     id: 3,
-    name: "Michael Chen",
-    position: "Tech Enthusiast",
-    quote: "As someone who's very particular about sound quality, I was blown away by Audio Master's expertise. They created a custom solution that exceeded my expectations.",
-    rating: 5
+    name: "Fatima Al Suwaidi",
+    position: "Architect, Abu Dhabi",
+    quote: "As an architect, I'm very particular about aesthetics. Audio Master worked with our design team to ensure everything was sleek, minimal, and high-end — without compromising on performance.",
+    rating: 4
   },
   {
     id: 4,
-    name: "Amanda Williams",
-    position: "Interior Designer",
-    quote: "I've recommended Audio Master to several clients. Their ability to integrate sophisticated audio systems while respecting design aesthetics is truly impressive.",
-    rating: 4
-  }
+    name: "Ravi Menon",
+    position: "Restaurant Owner, Jumeirah",
+    quote: "They understood the vibe I wanted for my restaurant and delivered a sound system that blends beautifully into the interiors. Guests have noticed the improvement, especially during peak hours.",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Omar Al Hammadi",
+    position: "Property Manager, Dubai",
+    quote: "The technicians from Audio Master was extremely knowledgeable and efficient. They explained every step, kept the space clean, and completed the job faster than expected — all at a very fair price.",
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {
@@ -77,7 +84,7 @@ const Testimonials = () => {
   }, [next]);
 
   return (
-    <section id="testimonials" className="section-padding bg-burj-dark text-white">
+    <section id="testimonials" aria-labelledby="testimonials-heading" className="section-padding bg-burj-dark text-white">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 bg-burj-accent/20 rounded-full text-sm font-medium text-burj-accent mb-4">
@@ -91,7 +98,7 @@ const Testimonials = () => {
           </p>
         </AnimatedSection>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto" role="region" aria-label="Testimonials Carousel">
           <div className="relative overflow-hidden h-[300px] md:h-[250px]">
             {testimonials.map((testimonial, index) => (
               <div

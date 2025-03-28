@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import AnimatedSection from "./AnimatedSection";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+
 
 interface Project {
   title: string;
@@ -34,14 +35,25 @@ const projects: Project[] = [
     category: "Commercial",
     image: "https://images.unsplash.com/photo-1558584673-c834fb1cc3ca?q=80&w=3000&auto=format&fit=crop",
     description: "Sophisticated sound system with perfect acoustics for an enhanced dining experience."
-  }
+  },
+  {
+    title: "Luxury Villa Audio System",
+    category: "Residential",
+    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2898&auto=format&fit=crop",
+    description: "Complete home audio setup with ceiling speakers in 12 zones and a dedicated cinema room."
+  },
+  {
+    title: "Boutique Hotel Lobby",
+    category: "Commercial",
+    image: "https://images.unsplash.com/photo-1626128665085-483747621778?q=80&w=2940&auto=format&fit=crop",
+    description: "Ambient background music system with seamless zone control for different areas."
+  },
 ];
 
 const categories = ["All", ...Array.from(new Set(projects.map(p => p.category)))];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  // const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const filteredProjects = activeCategory === "All"
@@ -80,7 +92,7 @@ const Portfolio = () => {
           ))}
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <AnimatedSection
               key={index}
@@ -102,20 +114,17 @@ const Portfolio = () => {
                   </span>
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-white/80 mb-4 max-w-md mx-auto">{project.description}</p>
-                  <button
-                    className="inline-flex items-center text-black bg-white px-4 py-2 rounded-full text-sm hover:bg-white/90 transition-colors"
-                  // onClick={() => setActiveProject(project)}
-                  >
-                    View Details
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </button>
                 </div>
               </div>
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={100}
+                height={100}
+                priority
+                quality={100}
+                unoptimized
                 className="w-full h-[300px] object-cover transform transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
               />
 
               <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-white/5 via-white/30 to-white/5 overflow-hidden">
