@@ -67,7 +67,7 @@ const Hero = () => {
           <AnimatedSection
             animation="fade-in-left"
             delay={400}
-            className="relative lg:h-[600px] flex items-center justify-center"
+            className="relative h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center"
           >
             <div className="relative w-full h-full max-w-[500px] mx-auto">
               {/* Premium sound wave effect */}
