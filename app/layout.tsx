@@ -29,7 +29,7 @@ export const metadata = {
     },
   }
 };
-const GA_TRACKING_ID = "G-33Y17T3R66"
+const GA_TRACKING_ID = "G-225ZC30CGW"
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
