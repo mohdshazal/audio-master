@@ -1,6 +1,3 @@
 User-Agent: *
 Allow: /
-Disallow: /private/
-Disallow: /favicon.ico
-Disallow: /_next/
 Sitemap: https://audiomaster.ae/sitemap.xml
