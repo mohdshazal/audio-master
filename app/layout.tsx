@@ -36,6 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="tu2ijC6crivdWAKbXghfRyAnpL5zRT56h-ltwiXsB34" />
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
