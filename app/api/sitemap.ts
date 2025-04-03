@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
-const Sitemap = (req: NextApiRequest, res: NextApiResponse) => {
+export async function GET() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
@@ -11,9 +11,9 @@ const Sitemap = (req: NextApiRequest, res: NextApiResponse) => {
       </url>
     </urlset>`;
 
-  res.setHeader("Content-Type", "application/xml");
-  res.write(sitemap);
-  res.end();
-};
-
-export default Sitemap;
+  return new NextResponse(sitemap, {
+    headers: {
+      "Content-Type": "application/xml",
+    },
+  });
+}
