@@ -45,7 +45,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-lg text-white/70 max-w-2xl">
-              We specialize in professional audio system installations, re-installations, and sound setup services across the UAE. Our expert team ensures your sound system is technically optimized to deliver the **ultimate listening experience** — all at a **budget-friendly price**, without compromising on quality.
+              We specialize in professional audio system installations, re-installations, and sound setup services across the UAE. Our expert team ensures your sound system is technically optimized to deliver the ultimate listening experience — all at a budget-friendly price, without compromising on quality.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
