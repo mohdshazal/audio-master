@@ -3,15 +3,15 @@ import { ReactNode } from "react";
 import Providers from "./provider";
 import Script from "next/script";
 export const metadata = {
-  title: "Audio Master | Premium Audio Systems & Installation",
+  title: "Audio Master | Premium Audio Systems & Installation in Dubai",
   description:
-    "Audio Master provides premium audio system installation, home cinema setups, and professional sound solutions.",
+    "Expert audio system and speaker installation services in Dubai, including home cinemas, sound system wiring, and premium audio setups.",
   keywords:
-    "audio systems, speaker installation, home cinema, sound systems, premium audio, surround sound, Audio Master",
+    "speaker installation in Dubai, audio system installation, audio speaker installation, sound systems installation, audio wiring, home theater setup, surround sound UAE, premium audio installation Dubai, home cinema setup, Outdoor speaker installation, Indoor speaker installation, premium speaker installation, high end speaker installation",
   openGraph: {
-    title: "Audio Master | Premium Audio Systems & Installation",
+    title: "Professional Audio & Speaker Installation in Dubai | Audio Master",
     description:
-      "Experience premium audio with Audio Master - specialists in high-end audio system installation and home cinema solutions.",
+      "Experience premium audio with Audio Master - specialists in high-end audio system installation and home cinema solutions.We provide expert speaker installation, sound system wiring, and home audio setups in Dubai. Elevate your listening experience with Audio Master.",
     type: "website",
     url: "https://audiomaster.ae",
     images: [
