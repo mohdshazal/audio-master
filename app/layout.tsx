@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://www.audiomaster.ae/favicon.ico" />
         <meta name="google-site-verification" content="tu2ijC6crivdWAKbXghfRyAnpL5zRT56h-ltwiXsB34" />
         <Script
           strategy="afterInteractive"
